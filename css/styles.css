@@ -1,4 +1,13 @@
 /*====Base Layout====*/
-    * {
-        box-sizing: border-box;
-    }
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 14px;
+}
+
+body {
+  font-family: 'Roboto', serif;
+  background-color: whitesmoke;
+}
