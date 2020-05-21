@@ -1,13 +1,176 @@
-/*====Base Layout====*/
-* {
+/*====BASE LAYOUT====*/
+  * {
     box-sizing: border-box;
-}
+  }
 
-html {
+  html {
+    font-size: 12px;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  body {
+    font-family: 'Roboto', serif;
+    background-color: whitesmoke;
+  }
+
+  h1 { /*main head line*/
+    text-align: center;
+    font-family: 'Roboto', serif;
+  }
+
+/*====SEARCH INPUT====*/
+
+  .form-input { /*search input field*/
+    width: 100%;
+    border-radius: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 16px;
+  }
+
+/*====EMPLOYEE OVERLAY====*/
+
+  .modal-overlay { /*overlay container*/
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+  }
+
+  .modal-content { /*overlay content*/
+    background-color: white;
+    width: 75%;
+    height: 35%;
+    margin: 100px 50px;
+    padding: 10px;
+    border-radius: 5px;
     font-size: 14px;
-}
+  }
 
-body {
-  font-family: 'Roboto', serif;
-  background-color: whitesmoke;
-}
+  .modal-content span { /*overlay closing*/
+    padding-left: 95%;
+  }
+
+  .modal-img { /*overlay employee img w/arrows*/
+    text-align: center; 
+  }
+
+  .profile-img { /*overlay employee img*/
+    border-radius: 50%;
+  }
+
+  .right,
+  .left { /*overlay L&R arrows*/
+    border: none; 
+    background: none;
+    font-size: 20px;
+  }
+
+  .modal-content h2 { /*overlay name*/
+    text-align: center;
+  }
+
+  .modal-content p { /*overlay text*/
+    text-align: center;
+    padding-bottom: 5px;
+  }
+
+  .modal-content hr { /*overlay line*/
+    width: 80%;
+  }
+
+/*====EMPLOYEE CARDS====*/
+
+  .container { /*container of employee cards*/
+    display: grid;
+  }
+
+  .card { /*employee cards*/
+    border: solid 1px gray;
+    display: flex;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    background-color: white;
+    padding: 5px 10px;
+  }
+
+  .card img { /*employee pictures*/
+    border-radius: 50%;
+    margin-top: 15px;
+    margin-right: 15px;
+  }
+
+  .employee-data { /*employee text info*/
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .employee-data h2 { /*employee name*/
+    margin-bottom: 10px;
+  }
+
+  .employee-data p { /*employee email & location*/
+    color: gray;
+    margin: 0px 0px 10px auto;
+  }
+
+
+/*=====MEDIA QUERIES=====*/
+
+  @media (min-width: 768px) {
+
+    h1 { /*main head line*/
+      text-align: left;
+    }
+
+    html {
+      font-size: 14px;
+    }
+
+    .modal-content { /*overlay content*/
+      width: 50%; 
+      height: 35%; 
+      margin: 100px 175px;
+    }
+
+    .container { /*container of employee cards*/
+      display: grid;
+      grid-template-columns: 1fr 1fr; 
+    }
+    
+    .card { /*employee cards*/
+      width: 95%;
+      margin-left: 5px;
+    }
+  }
+
+
+/*1024 Media Query*/
+
+  @media (min-width: 1024px) {
+    html {
+      font-size: 12px;
+    }
+
+    .modal-content { /*overlay content*/
+      width: 50%; 
+      height: 35%; 
+      margin: 150px 300px;
+    }
+  
+    .container { /*container of employee cards*/
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr; 
+    }
+
+    .card { /*employee cards*/
+      width: 95%;
+    } 
+  }

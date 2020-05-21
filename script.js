@@ -7,7 +7,7 @@
   });
 */
 
-// ==== Main Variables ====
+// ==== Main Variables ==== 
 
 const url = 'https://randomuser.me/api/?results=12&nat=us'; //12 random API 
 const employees = [];
@@ -15,6 +15,8 @@ const employeeBox = document.getElementById('main');
 const employeeOverlay = document.getElementsByClassName('modal-overlay')[0];
 
 let search = document.getElementById('search');
+const string = document.getElementById('search');
+let letter = document.getElementsByClassName('card');
 
 
 // ==== Fetch Functions ====
@@ -40,7 +42,7 @@ let search = document.getElementById('search');
 
                         <div class="employee-data">
                             <h2>${data.results[i].name.first} ${data.results[i].name.last}</h2>
-                            <p>${data.results[i].email}</p>
+                            <p class="email">${data.results[i].email}</p>
                             <p>${data.results[i].location.city}</p>
                         </div>
                     </div>
@@ -68,7 +70,7 @@ let search = document.getElementById('search');
                     <span class="closing">X</span>
                     <div class="modal-img"> 
                         <button class="left"><</button>
-                        <img src="${employee.picture.large}" alt=""> 
+                        <img src="${employee.picture.large}" alt="" class="profile-img"> 
                         <button class="right">></button>
                     </div>
 
@@ -117,10 +119,8 @@ employeeOverlay.addEventListener('click', (event) => {
 })
 
 
-//====Search Filter Function ====
 
-const string = document.getElementById('search');
-let letter = document.getElementsByClassName('card');
+//====Search Filter Function ====
 
 string.addEventListener('keyup', () =>{
     const input = string.value.toLowerCase();
