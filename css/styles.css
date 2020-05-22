@@ -5,9 +5,8 @@
 
   html {
     font-size: 12px;
-    margin-left: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-left: 5px;
+    margin-top: 20px;
   }
 
   body {
@@ -28,6 +27,7 @@
     padding-top: 10px;
     padding-bottom: 10px;
     font-size: 16px;
+    border: solid 1px lightgray;
   }
 
 /*====EMPLOYEE OVERLAY====*/
@@ -45,9 +45,7 @@
 
   .modal-content { /*overlay content*/
     background-color: white;
-    width: 75%;
-    height: 35%;
-    margin: 100px 50px;
+    margin: 100px 10% 100px 15%;
     padding: 10px;
     border-radius: 5px;
     font-size: 14px;
@@ -95,10 +93,13 @@
     border: solid 1px gray;
     display: flex;
     border-radius: 10px;
-    margin-bottom: 10px;
-    margin-top: 10px;
+    margin-top: 20px;
     background-color: white;
-    padding: 5px 10px;
+    padding: 30px 15px;
+  }
+
+  .card:hover { /*employee cards on hover*/
+    background-color: lightgoldenrodyellow;
   }
 
   .card img { /*employee pictures*/
@@ -136,7 +137,7 @@
 
     .modal-content { /*overlay content*/
       width: 50%; 
-      height: 35%; 
+      height: 50%;
       margin: 100px 175px;
     }
 
@@ -161,7 +162,7 @@
 
     .modal-content { /*overlay content*/
       width: 50%; 
-      height: 35%; 
+      height: 60%;
       margin: 150px 300px;
     }
   
